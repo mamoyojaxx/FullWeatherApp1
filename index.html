@@ -14,15 +14,15 @@
     <header>
         <img src = "images/weather_logo.png" alt="logo" width="100px" height="100px"/>
         <h1>Full Weather App</h1>
-        <form class = "search-form">
-            <input type="search" name="city" placeholder="Enter a city" required class = "search-form-input">
+        <form class = "search-form" id="search-form">
+            <input type="search" name="city" placeholder="Enter a city" required class = "search-form-input" id = "search-form-input">
             <input type="submit" value="Search" class = "search-form-button">
         </form>
     </header>
     <main>
         <div class = "app_data">
         <div>
-            <h1 class="app_city">Durban</h1>
+            <h1 class="app_city" id="city">Durban</h1>
             <p class="app_details">
                 Tuesday 10:24, moderate rain
                 <br>
@@ -38,5 +38,6 @@
     </main>
     <footer>This project has been done by <a href="https://github.com/mamoyojaxx" target="_blank" rel="noreferrer">RJ Mtomba</a> is <a href="https://github.com/mamoyojaxx/FullWeatherApp1" target="_blank" rel="noreferrer">open-sourced on Github</a> and  <a href="https://fulllweatherapp1.netlify.app/" target="_blank" rel="noreferrer"> hosted on Netlify</a></footer>
 </div>
+<script src="src/index.js"></script>
 </body>
 </html>
