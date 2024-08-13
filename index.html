@@ -8,12 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
 <div class = "weather_app">
     <header>
-        <img src = "images/weather_logo.png" alt="logo" width="100px" height="100px"/>
-        <h1>Full Weather App</h1>
+        <div class = "logo">
+        <img src = "images/weather_logo.png" alt="logo" class = "fwalogo"/>
+        <h1 class="fwa">Full Weather App</h1>
+    </div>
         <form class = "search-form" id="search-form">
             <input type="search" name="city" placeholder="Enter a city" required class = "search-form-input" id = "search-form-input">
             <input type="submit" value="Search" class = "search-form-button">
@@ -22,7 +25,7 @@
     <main>
         <div class = "app_data">
         <div>
-            <h1 class="app_city" id="city">Durban</h1>
+            <h1 class="app_city" id="city"></h1>
             <p class="app_details">
                 Tuesday 10:24, moderate rain
                 <br>
@@ -31,7 +34,7 @@
         </div>
         <div class = "app_temp_container">
         <div class="app_icon">🌦️</div>
-        <div class = "app_temp">24</div>
+        <div class = "app_temp" id = "app_temp"></div>
         <div class = "app_unit">°C</div> 
         </div>
     </div>

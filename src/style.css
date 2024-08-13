@@ -4,6 +4,17 @@ body{
     font-weight: 300;
   font-style: italic;
 }
+.logo{
+    display: flex;
+}
+.fwalogo{
+    margin: 10px;
+    width: 100px; 
+    height:100px
+}
+.fwa{
+    margin-top: 50px;
+}
 .weather_app{
     background-color: #ffffff;
     max-width: 600px;
