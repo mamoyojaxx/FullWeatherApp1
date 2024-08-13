@@ -75,16 +75,17 @@ main{
     display: flex;
 }
 .app_icon{
-    font-size: 40px;
-    margin-top: 20px
+    width: 90px;
+    height: 90px;
+  
 }
 .app_temp{
     font-size: 90px;
-    margin-left: 10px;
+    line-height: 90px;
     font-weight: bold;
 }
 .app_unit{
-    margin-top: 18px;
+    margin-top: 6px;
     font-size: 30px;
 }
 

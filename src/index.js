@@ -22,6 +22,10 @@ function showWeatherData(response){
    let date = document.querySelector("#time");
    let dateinfo = new Date(response.data.time * 1000);
    date.innerHTML = formatDate(dateinfo);
+
+   let icon = document.querySelector("#app-icon");
+   let iconinfo = `<img src="${response.data.condition.icon_url}" alt="weather-icon" class="app_icon">`
+   icon.innerHTML = iconinfo;
 }
 
 function formatDate(date) {
