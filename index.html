@@ -14,23 +14,27 @@
     <header>
         <img src = "images/weather_logo.png" alt="logo" width="100px" height="100px"/>
         <h1>Full Weather App</h1>
-        <form>
-            <input type="search" name="city" placeholder="Enter a city" required>
-            <input type="submit" value="Search">
+        <form class = "search-form">
+            <input type="search" name="city" placeholder="Enter a city" required class = "search-form-input">
+            <input type="submit" value="Search" class = "search-form-button">
         </form>
     </header>
     <main>
+        <div class = "app_data">
         <div>
-            <h1>Durban</h1>
-            <p>
+            <h1 class="app_city">Durban</h1>
+            <p class="app_details">
                 Tuesday 10:24, moderate rain
                 <br>
-                Humidity: 66%, Windspeed: 3.2km/hr
+                Humidity: <strong>66%</strong> Windspeed: <strong>3.2km/hr</strong>
             </p>
         </div>
-        <div>
-            🌦️24°C 
+        <div class = "app_temp_container">
+        <div class="app_icon">🌦️</div>
+        <div class = "app_temp">24</div>
+        <div class = "app_unit">°C</div> 
         </div>
+    </div>
     </main>
     <footer>This project has been done by <a href="https://github.com/mamoyojaxx" target="_blank" rel="noreferrer">RJ Mtomba</a> is <a href="https://github.com/mamoyojaxx/FullWeatherApp1" target="_blank" rel="noreferrer">open-sourced on Github</a> and  <a href="https://fulllweatherapp1.netlify.app/" target="_blank" rel="noreferrer"> hosted on Netlify</a></footer>
 </div>
