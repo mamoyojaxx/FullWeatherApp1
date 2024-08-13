@@ -1,10 +1,55 @@
 function showWeatherData(response){
+    let city = document.querySelector("#city")
+    let cityinfo = response.data.city;
+    city.innerHTML = cityinfo;
+
     let temp = document.querySelector("#app_temp");
     let tempinfo = Math.round(response.data.temperature.current);
-    let city = document.querySelector("#city")
-    city.innerHTML = response.data.city;
-    temp.innerHTML = tempinfo;
+   temp.innerHTML = tempinfo;
+
+   let humid = document.querySelector("#hum");
+    let humidinfo = Math.round(response.data.temperature.humidity);
+   humid.innerHTML = `${humidinfo}%`;
+
+   let wspeed = document.querySelector("#speed");
+    let wspeedinfo = response.data.wind.speed;
+   wspeed.innerHTML = `${wspeedinfo}m/sec`;
+
+   let wstate = document.querySelector("#state");
+    let wstateinfo = response.data.condition.description;
+   wstate.innerHTML = wstateinfo;
+
+   let date = document.querySelector("#time");
+   let dateinfo = new Date(response.data.time * 1000);
+   date.innerHTML = formatDate(dateinfo);
 }
+
+function formatDate(date) {
+    let minutes = date.getMinutes();
+    let hours = date.getHours();
+    let day = date.getDay();
+  
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+  
+    if (hours < 10) {
+      hours = `0${hours}`;
+    }
+  
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+  
+    let formattedDay = days[day];
+    return `${formattedDay} ${hours}:${minutes}`;
+  }
 
 function searchCity(city){
 let apiKey = "d001310fae770o7ftaaab3f4b5974a90";
